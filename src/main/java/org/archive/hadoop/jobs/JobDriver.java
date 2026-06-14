@@ -4,6 +4,7 @@ package org.archive.hadoop.jobs;
 //import org.apache.hadoop.util.ProgramDriver;
 import org.archive.extract.ResourceExtractor;
 import org.archive.hadoop.cdx.CDXClusterRangeDumper;
+import org.archive.hadoop.tools.WEATExtractor;
 import org.archive.hadoop.cdx.CDXConverterTool;
 import org.archive.hadoop.cdx.HDFSLSR;
 import org.archive.hadoop.cdx.HDFSRangeDumper;
@@ -101,6 +102,10 @@ public class JobDriver {
 			pgd.addClass(WARCMetadataRecordGenerator.TOOL_NAME,
 					WARCMetadataRecordGenerator.class,
 					WARCMetadataRecordGenerator.TOOL_DESCRIPTION);
+
+			pgd.addClass(WEATExtractor.TOOL_NAME,
+					WEATExtractor.class,
+					WEATExtractor.TOOL_DESCRIPTION);
 
 			pgd.driver(args);
 
